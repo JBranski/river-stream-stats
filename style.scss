@@ -1,0 +1,49 @@
+@import "./scss/_variables";
+@import "./scss/_navigation";
+@import "./scss/stream-list";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 16px;
+}
+
+body{
+	background-color: $primary;
+	color: $white;
+	font-family: sans-serif;
+	font-size: $font-size-sm;
+}
+
+header{
+	height: 20vh;
+}
+
+main{
+	padding: 2em;
+}
+
+h1{
+	font-size: $font-size-xl;
+}
+
+h2{
+	font-size: $font-size-lg;
+}
+
+h3{
+	font-size: $font-size-md;
+}
+
+h4{
+	font-size: $font-size-sm;
+}
+
+.form-section{
+	max-width: 1200px;
+	padding-top: 5em;
+}
