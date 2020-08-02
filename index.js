@@ -192,7 +192,7 @@ function generateListItem(){
 				<h3>${streamerInfo.title}</h3>
 				<figure>
 					<iframe
-						src="https://player.twitch.tv/?videos=v${streamerInfo.last_vod}&parent=jbranski.github.io&autoplay=false"	
+						src="https://player.twitch.tv/?video=v${streamerInfo.last_vod}&parent=jbranski.github.io&autoplay=false"	
 						frameborder="0"
 						scrolling="no"
 						allowfullscreen="true">
