@@ -23,10 +23,12 @@
 				<fieldset>
 					<label for="streamer-name">
 						Streamer name:
-						<input type="text" name="streamer-name" id="streamer-name">
+						<input type="text" name="streamer-name" id="streamer-name" class="js-streamer-query">
+					</label>
+					<label for="streamer-limit">
+						<input type="number" name="streamer-limit" id="streamer-limit" class="js-streamer-limit" min="1" max="100" value="1">
 					</label>
 					<input type="submit" value="Lookup streamer">
-					<input type="button" value="Clear list" id="js-clear-list">
 				</fieldset>
 				
 
@@ -35,7 +37,8 @@
 	</header>
 	<main>
 		<article class="streamerInfo">
-			<ul class="js-streamer-list">
+
+			<ul class="js-streamer-list streamer-list">
 			</ul>
 		</article>
 	</main>

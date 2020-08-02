@@ -1,6 +1,6 @@
 @import "./scss/_variables";
 @import "./scss/_navigation";
-@import "./scss/stream-list";
+@import "./scss/_stream-list";
 
 *{
 	margin: 0;
@@ -16,7 +16,7 @@ body{
 	background-color: $primary;
 	color: $white;
 	font-family: sans-serif;
-	font-size: $font-size-sm;
+	font-size: $font-size-md;
 }
 
 header{
