@@ -176,8 +176,7 @@ function generateListItem(){
 				<figure>
 					<iframe
 						src="https://player.twitch.tv/?channel=${streamerInfo.name}&parent=jbranski.github.io&autoplay=false"
-						height="300"
-						width="400"
+						
 						frameborder="0"
 						scrolling="no"
 						allowfullscreen="true">
