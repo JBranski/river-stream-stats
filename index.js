@@ -54,6 +54,7 @@ function getStreamerList(streamer = " ", limit = 20){
 // contruct streamer info
 async function constructStreamerInfo(results, limit){
 	for(let i = 0; i < results.data.length; i++){
+
 		await getStreamInfo(results, i);
 
 		// get streamer type
@@ -66,7 +67,15 @@ async function constructStreamerInfo(results, limit){
 			.then(result => getstreamerType(result, i))
 			.catch(error => console.log('error', error));
 
-
+		// get recent vod
+		await fetch(`${searchURL}videos?user_id=${streamerInfo.id}&first=1`, requestOptions)
+		.then(response => {
+			if(response.ok){
+				return response.json()
+			}
+		})
+		.then(result => getLastVod(result, i))
+		.catch(error => console.log('error', error));
 
 		// if streamer is live, get viewers, game name, and preview
 		if(streamerInfo.live == true){
@@ -85,18 +94,11 @@ async function constructStreamerInfo(results, limit){
 				.catch(error => console.log('error', error));
 		}
 
-		// get recent vod
-		await fetch(`${searchURL}videos?user_id=${streamerInfo.id}&first=1`, requestOptions)
-		.then(response => {
-			if(response.ok){
-				return response.json()
-			}
-		})
-		.then(result => getLastVod(result, i))
-		.catch(error => console.log('error', error));
+		
 
 		await generateListItem()
-		console.log(streamerInfo);
+		let test = JSON.stringify(streamerInfo)
+		console.log(test)
 	}
 }
 
@@ -146,8 +148,9 @@ function getGameData(results, counter){
 
 // get most recent vod
 function getLastVod(results, counter){
-	streamerInfo.last_vod = results.data[counter].id;
-	streamerInfo.last_vod_date = new Date(results.data[counter].created_at);
+	console.log(results);
+	streamerInfo.last_vod = results.data[0].id;
+	streamerInfo.last_vod_date = new Date(results.data[0].created_at);
 }
 
 
@@ -176,7 +179,8 @@ function generateListItem(){
 				<figure>
 					<iframe
 						src="https://player.twitch.tv/?channel=${streamerInfo.name}&parent=jbranski.github.io&autoplay=false"
-						
+						height="300"
+						width="400"
 						frameborder="0"
 						scrolling="no"
 						allowfullscreen="true">

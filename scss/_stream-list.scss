@@ -8,7 +8,9 @@
 .streamer-list-item{
 	width: 100%;
 	background-color: $secondary;
-	box-shadow: 2px 2px 3px rgba($black, .7);
+	box-shadow: 2px 3px 3px rgba($black, .7);
+	margin-bottom: 2em;
+	padding-bottom: 1em;
 
 	header{
 		display: flex;
