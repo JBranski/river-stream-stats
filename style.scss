@@ -17,10 +17,75 @@ body{
 	color: $white;
 	font-family: sans-serif;
 	font-size: $font-size-md;
+	scroll-behavior: smooth;
+}
+
+.home{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 }
 
 header{
-	height: 20vh;
+	height: 80vh;
+	background-image: url('./img/hero-img.jpg');
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	a, input[type="submit"]{
+		transition: all 1s ease;
+		display: inline-block;
+		margin-top: 2em;
+		padding: .5em 2em;
+		color: $white;
+		background-color: rgba($primary, .7);
+		text-decoration: none;
+		border: 2px solid rgba($white, .7);
+		cursor: pointer;
+
+		&:hover{
+			background-color: $secondary;
+			border: 2px solid rgba($highlight, .5);
+		}
+	}
+
+	form{
+		margin: 0 auto;
+		width: 95%;
+		max-width: 1200px;
+		font-size: $font-size-lg;
+		
+		fieldset{
+			border: none;
+		}
+
+		input{
+			font-size: $font-size-lg;
+			width: 360px;
+			padding: .25em;
+			border-radius: 5px;
+			background-color: rgba($secondary, .7);
+			color: $white;
+			transition: all 1s ease;
+		}
+
+		input:focus{
+			border: 2px solid rgba($highlight, .5);
+		}
+
+		label{
+			display: block;
+			margin-top: 1em;
+		}
+
+		input[type="submit"]{
+			width: 360px;
+		}
+	}
 }
 
 main{
@@ -47,3 +112,4 @@ h4{
 	max-width: 1200px;
 	padding-top: 5em;
 }
+
