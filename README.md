@@ -8,6 +8,17 @@ This site is built with the viewer in mind. As an avid viewer and streamer mysel
 
 To use River, navigate to the stream search page, enter a search term, and how many results you want to be shown at most. When you click search, you will be shown a list of all streamers within the search limit that match your query.
 
-##
+## Previews
+
+![River Stream Stats home page preview](https://raw.githubusercontent.com/JBranski/river-stream-stats/master/img/desktop-home.png)
+![River Stream Stats search page preview](https://raw.githubusercontent.com/JBranski/river-stream-stats/master/img/desktop-search.png)
+![River Stream Stats list preview](https://raw.githubusercontent.com/JBranski/river-stream-stats/master/img/desktop-list.png)
+
+## Technologies
+* HTML
+* CSS/SCSS
+* JavaScript/JQuery
+* PhotoShop
+* Twitch API
 
 
