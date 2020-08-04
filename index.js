@@ -97,8 +97,6 @@ async function constructStreamerInfo(results, limit){
 		
 
 		await generateListItem()
-		let test = JSON.stringify(streamerInfo)
-		console.log(test)
 	}
 }
 
@@ -148,7 +146,6 @@ function getGameData(results, counter){
 
 // get most recent vod
 function getLastVod(results, counter){
-	console.log(results);
 	streamerInfo.last_vod = results.data[0].id;
 	streamerInfo.last_vod_date = new Date(results.data[0].created_at);
 }
