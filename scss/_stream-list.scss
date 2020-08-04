@@ -21,6 +21,7 @@
 	header{
 		display: flex;
 		flex-wrap: wrap;
+		align-items: unset;
 		height: 100px;
 		background-color: $black;
 		background-image: url('../img/hero-img.jpg');
@@ -55,6 +56,7 @@
 		p{
 			text-transform: capitalize;
 			font-style: italic;
+			margin: unset;
 		}
 
 		a{
